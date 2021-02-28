@@ -56,12 +56,9 @@ CREATE USER [YourAppName] FROM EXTERNAL PROVIDER;
 ALTER ROLE db_datareader ADD MEMBER [YourAppName];
 ALTER ROLE db_datawriter ADD MEMBER [YourAppName];
 ALTER ROLE db_ddladmin ADD MEMBER [YourAppName];
+GRANT EXECUTE TO [YourAppName];
 GO
 ```
-
-
-4. same as we did in step 1 but now you need to set your **Active Directory admin** to be your App Name (Managed Identity Name).
-
 
 
 **Note** Your local.settings.json should look like this : 
